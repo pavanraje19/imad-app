@@ -9,12 +9,12 @@ var config={
     host:"http://pravinrathod.imad.hasura-app.io/",
     port:"5432",
     user:"pravinrathod",
-    password:process.env.DB_PASSWORD || "db-pravinrathod-11801",
+    password:process.env.DB_PASSWORD,
     database:"pravinrathod"
 };
 var pooll=new Pl.Pool(config);
 app.get('/testdb',function(req,res){
-    pooll.query("SELECT * FROM category",function(err,result){
+    pooll.query('SELECT * FROM category',function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
