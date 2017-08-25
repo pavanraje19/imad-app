@@ -6,10 +6,10 @@ var Pl=require('pg');
 var app = express();
 
 var config={
-    host:"http://pravinrathod.imad.hasura-app.io/",
+    host:"http://pravinrathod.imad.hasura-app.io",
     port:"5432",
     user:"pravinrathod",
-    password:process.env.DB_PASSWORD,
+    password:'db-pravinrathod-11801',
     database:"pravinrathod"
 };
 var pooll=new Pl.Pool(config);
