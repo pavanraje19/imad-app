@@ -6,7 +6,7 @@ var Pl=require('pg');
 var app = express();
 
 var config={
-    host:'http://pravinrathod.imad.hasura-app.io',
+    host:'http://db.imad.hasura-app.io',
     port:'5432',
     user:'pravinrathod',
     password:'db-pravinrathod-11801',
