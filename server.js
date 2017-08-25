@@ -10,6 +10,19 @@ var config={
     password:"db-pravinrathod-11801",
     database:"pravinrathod"
 };
+var pooll=new Pool(config);
+
+app.get('/test-db',function(req,res){
+    pooll.query("SELECT * FROM user",function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            res.send(JSON.stringify(result));
+        }
+        
+    });
+});
 var app = express();
 
 app.use(morgan('combined'));
