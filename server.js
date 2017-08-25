@@ -12,7 +12,7 @@ var config={
 };
 var pooll=new Pool(config);
 app.get('/testdb',function(req,res){
-    pooll.query("SELECT * FROM user",function(err,result){
+    pooll.query("SELECT * FROM category",function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
