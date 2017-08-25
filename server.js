@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
-var pool=require('pg').Pool;
+var Pool=require('pg').Pool;
 var config={
     host:"http://pravinrathod.imad.hasura-app.io/",
     port:"5432",
