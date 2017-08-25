@@ -2,15 +2,15 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
-var Pool=require('pg').Pool;
+var Pl=require('pg');
 var config={
     host:"http://pravinrathod.imad.hasura-app.io/",
     port:"5432",
     user:"pravinrathod",
-    password:"db-pravinrathod-11801",
+    password:process.env.DATABASE_URL || "db-pravinrathod-11801",
     database:"pravinrathod"
 };
-var pooll=new Pool(config);
+var pooll=new Pl.Pool(config);
 
 app.get('/testdb',function(req,res){
     pooll.query("SELECT * FROM user",function(err,result){
