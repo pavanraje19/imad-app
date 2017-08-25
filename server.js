@@ -11,7 +11,7 @@ var config={
     host:'http://db.imad.hasura-app.io',
    
     //port:'5432',
-    user:'pravinrathod',
+    username:'pravinrathod',
     password:'db-pravinrathod-11801',
     database:'pravinrathod'
 };
