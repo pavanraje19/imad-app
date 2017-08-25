@@ -11,7 +11,6 @@ var config={
     database:"pravinrathod"
 };
 var pooll=new Pool(config);
-
 app.get('/testdb',function(req,res){
     pooll.query("SELECT * FROM user",function(err,result){
         if(err){
