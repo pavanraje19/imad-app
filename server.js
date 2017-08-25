@@ -8,7 +8,7 @@ var http = require("http");
 var app = express();
 
 var config={
-    host:'http://db.imad.hasura-app.io',
+    //host:'http://db.imad.hasura-app.io',
    
     //port:'5432',
     username:'pravinrathod',
