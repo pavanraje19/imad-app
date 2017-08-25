@@ -2,7 +2,16 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
+var pool=require('pg').Pool;
+var config={
+    host:"http://pravinrathod.imad.hasura-app.io/",
+    port:"5432",
+    user:"pravinrathod",
+    password:"db-pravinrathod-11801",
+    database:"pravinrathod"
+};
 var app = express();
+
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
