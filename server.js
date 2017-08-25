@@ -6,11 +6,11 @@ var Pl=require('pg');
 var app = express();
 
 var config={
-    host:"localhost",
-    port:"5432",
-    user:"pravinrathod",
+    host:'http://pravinrathod.imad.hasura-app.io',
+    port:'5432',
+    user:'pravinrathod',
     password:'db-pravinrathod-11801',
-    database:"pravinrathod"
+    database:'pravinrathod'
 };
 var pooll=new Pl.Pool(config);
 app.get('/testdb',function(req,res){
