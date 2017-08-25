@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
 var Pl=require('pg');
+var app = express();
 
 var config={
     host:"http://pravinrathod.imad.hasura-app.io/",
@@ -23,7 +24,7 @@ app.get('/testdb',function(req,res){
         
     });
 });
-var app = express();
+
 
 app.use(morgan('combined'));
 
